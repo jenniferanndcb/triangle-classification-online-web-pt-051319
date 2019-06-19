@@ -16,7 +16,9 @@ class Triangle
         :isosceles 
       when a != b && a != c && b != c 
         :scalene 
-      when a + b <= c|| b + c <= a || a + c <= b 
+    end 
+      
+      if (a + b <= c) || (b + c <= a) || (a + c <= b) ||  
         raise TriangleError 
       when a == 0 && b == 0 && c == 0 
         raise TriangleError
