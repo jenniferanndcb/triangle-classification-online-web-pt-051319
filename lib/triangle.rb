@@ -18,7 +18,6 @@ class Triangle
         :scalene 
       when @l1 <= 0 || @l2 <= 0 || @L3 <= 0 
         raise TriangleError 
-      end 
       
     end 
   
