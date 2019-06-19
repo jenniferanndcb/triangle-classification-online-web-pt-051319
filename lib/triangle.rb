@@ -16,7 +16,7 @@ class Triangle
         :isosceles 
       when @l1 != @l2 && @l1 != @l3 && @l2 != @l3 
         :scalene 
-      when @l1 <= 0 || @l2 <= 0 || @L3 <= 0 
+      when @l1 + @l2 <= @l3 || @l2 + @l3 <= 0 || @L3 <= 0 
         raise TriangleError 
       
     end 
