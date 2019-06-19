@@ -1,22 +1,22 @@
 class Triangle
   
-  attr_accessor :l1, :l2, :l3
+  attr_accessor :a, :b, :c
   
-  def initialize(l1,l2,l3)
-    @l1 = l1 
-    @l2 = l2 
-    @l3 = l3
+  def initialize(a,b,c)
+    @a = a 
+    @b = b 
+    @c = c
   end 
   
   def kind 
     case 
-      when @l1 == @l2 && @l1 == @l3 
+      when a == b && a == c 
         :equilateral
-      when @l1 == @l2 || @l1 == @l3 ||@l2 == @l3 
+      when a == b || a == c ||b == c
         :isosceles 
-      when @l1 != @l2 && @l1 != @l3 && @l2 != @l3 
+      when a != b && a != c && b != c 
         :scalene 
-      when @l1 + @l2 <= @l3 || @l2 + @l3 <= 0 || @L3 <= 0 
+      when a + b <= c|| b + c <= a || a + c <= b 
         raise TriangleError 
       
     end 
